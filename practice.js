@@ -39,7 +39,6 @@
 // alert(year);
 // alert(isadmin);
 
-
 // ==============================================================
 
 // The maximal salary
@@ -61,30 +60,20 @@
 // P.S. Use Object.entries and destructuring to iterate over key/value pairs.
 
 let salaries = {
-  'john': 100,
-  'pete': 300,
-  'Mary': 250,
+  john: 100,
+  pete: 300,
+  Mary: 250,
 };
 
-function topSalary('john', 'pete', 'Mary'){
-  for(int i = 0, i < myArray.length; i++){
-    if(myArray[i] > max){
-      ma
+function topSalary(salaries) {
+  let maxSalary = 0;
+  let maxName = null;
+
+  for (const [name, salary] of Object.entries(salaries)) {
+    if (maxSalary < salary) {
+      maxSalary = salary;
+      maxName = name;
     }
   }
+  return maxName;
 }
-
-
-int[] myArray = new int[] {20,10,5,40,20,41,41,2,6,7,3,4,5,6,23,34,7,8,9,2};
-        int max = Integer.MIN_VALUE;
-        int sum=0;
-        for(int i = 0; i < myArray.length; i++)
-        {
-            if(myArray[i] > max) 
-            {
-                 max = myArray[i]*3;
-                 sum = sum + max;
-             }
-        }
-        System.out.println(sum);
-    }
