@@ -1,39 +1,90 @@
-// Smart function parameters
+// Destructuring assignment
+// importance: 5
 
-// We pass object to function
+// We have an object:
 
-// let option = {
-//   title: "I will succeed before december",
-//   items: ["item1", "item2"],
+// let user = {
+//   name: "John",
+//   years: 30
 // };
 
-// ---- and it immediately expands it to variables
+// Write the destructuring assignment that reads:
 
-// function showMenu({
-//   title = "Untitled",
-//   width /*: w*/ = 100,
-//   height /*: h */ = 200,
-//   items = [],
-// }) {
-//   // title, items -- taken  from options
-//   // width, heeight -- default used
+//     name property into the variable name.
+//     years property into the variable age.
+//     isAdmin property into the variable isAdmin (false, if no such property)
 
-//   alert(`${title} ${width} ${height}`);
-//   // alert(`${title} ${w} ${h}`);
-//   alert(items);
-// }
+// Here’s an example of the values after your assignment:
 
-// // showMenu(option);
+// let user = { name: "John", years: 30 };
 
-// // If we want to pass the default values then
-// showMenu({});
+// // your code to the left side:
+// // ... = user
 
-let option = {
-  title: "I will succeed before december",
-  items: ["item1", "item2"],
+// alert( name ); // John
+// alert( age ); // 30
+// alert( isAdmin ); // false
+
+// ======================================
+
+// Solution
+
+// ======================================
+
+// let user = { name: "John", year: 30 };
+
+// let { name, year, isadmin = false } = user;
+
+// alert(name);
+// alert(year);
+// alert(isadmin);
+
+
+// ==============================================================
+
+// The maximal salary
+// importance: 5
+
+// There is a salaries object:
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+
+// Create the function topSalary(salaries) that returns the name of the top-paid person.
+
+//     If salaries is empty, it should return null.
+//     If there are multiple top-paid persons, return any of them.
+
+// P.S. Use Object.entries and destructuring to iterate over key/value pairs.
+
+let salaries = {
+  'john': 100,
+  'pete': 300,
+  'Mary': 250,
 };
 
-function showMenu({ title = "Muaz", width = 100, height = 200 } = {}) {
-  alert(`${title}, ${width}, ${height}`);
+function topSalary('john', 'pete', 'Mary'){
+  for(int i = 0, i < myArray.length; i++){
+    if(myArray[i] > max){
+      ma
+    }
+  }
 }
-showMenu();
+
+
+int[] myArray = new int[] {20,10,5,40,20,41,41,2,6,7,3,4,5,6,23,34,7,8,9,2};
+        int max = Integer.MIN_VALUE;
+        int sum=0;
+        for(int i = 0; i < myArray.length; i++)
+        {
+            if(myArray[i] > max) 
+            {
+                 max = myArray[i]*3;
+                 sum = sum + max;
+             }
+        }
+        System.out.println(sum);
+    }
