@@ -1,73 +1,294 @@
-This curriculum is built around the official docs at **react.dev**, following the order of its "Learn" section. Every phase has the same loop: read the docs, do the docs' own challenges, build something small from scratch without copying, then check your approach with me. The timings assume steady daily study, so stretch or compress them as needed.
+# JavaScript to React Learning Plan
 
-## The loop for every phase
+This is now a merged JavaScript + React plan. The durable version lives in
+`learning-system/`:
 
-1. **Read** the listed docs pages and complete the interactive challenges inside them.
-2. **Build** the practice project from a blank Vite project (`npm create vite@latest`, React template). Don't copy code.
-3. **Revisit** the docs when you get stuck, instead of trying to memorize.
-4. **Checkpoint**: explain each concept out loud or in writing before moving on. If you can't, redo the project's weak part.
+- `learning-system/INSTRUCTOR_PROMPT.md`
+- `learning-system/CURRICULUM.md`
+- `learning-system/progress/PROGRESS.md`
+- `learning-system/progress/SESSIONS.md`
 
-Keep a small "functional JS" habit alongside it, since React leans on `map`, `filter`, `reduce`, spread, destructuring, and immutable updates. If any of those feel shaky, drill them for 15 minutes before each session.
+Use the instructor prompt for every session. The AI should make the learner
+solve problems, share their thinking before receiving help, build meaningful
+project features, and update progress/session files at the end.
 
-## Phase 0: JS readiness (2–3 days)
+## How Every Session Works
 
-Make sure you're comfortable with these, since React code uses them constantly: arrow functions, destructuring, spread/rest, `map`/`filter`/`reduce`, ES modules (`import`/`export`), template literals, optional chaining, closures, and promises with `async/await`.
+1. Read `learning-system/INSTRUCTOR_PROMPT.md`.
+2. Read `learning-system/CURRICULUM.md`.
+3. Read `learning-system/progress/PROGRESS.md`.
+4. Read `learning-system/progress/SESSIONS.md`.
+5. Continue from the current module.
+6. Give a problem or project task.
+7. Require the learner to explain their thinking and approach.
+8. Give hints, feedback, and corrections.
+9. Update progress, session logs, metrics, and charts.
 
-**Checkpoint:** you can transform an array of objects (filter, update one item, remove one item) without mutating it.
+## Main Project
 
-## Phase 1: Describing the UI (about 1 week)
+The main project is `ShelfLife`, a personal reading and learning library. It
+starts as plain JavaScript data manipulation and grows into a real React app
+with API search, persistence, state architecture, routing, forms, tests, and
+deployment.
 
-- **Read:** Quick Start (including the Tic-Tac-Toe tutorial and "Thinking in React"), then the whole "Describing the UI" section. That covers components, JSX, props, conditional rendering, lists and keys, and keeping components pure.
-- **Practice:** a static profile-card page, then a product list rendered from an array, with conditional badges such as "Sold out".
-- **Checkpoint:** you can explain why `key` matters, what "pure component" means, and how props flow down.
+This avoids relying on obsolete toy projects as the main learning path.
 
-## Phase 2: Adding interactivity (about 1 week)
+## Phase 0 - JavaScript Foundations
 
-- **Read:** the whole "Adding Interactivity" section: events, `useState`, render and commit, state as a snapshot, queueing updates, and updating objects and arrays in state.
-- **Practice:** a counter, then a to-do list with add, toggle, and delete, then a "like" button list.
-- **Checkpoint:** you can explain why `setCount(count + 1)` three times only adds 1, and why you must not mutate state.
+Start smaller than the original React-only plan. React depends heavily on
+arrays, objects, functions as values, immutable updates, and async data.
 
-## Phase 3: Managing state (1–1.5 weeks)
+### Day A - Arrays
 
-- **Read:** the "Managing State" section: reacting to input with state, choosing state structure, lifting state up, preserving and resetting state, `useReducer`, and Context.
-- **Practice:** build a shopping cart in three passes. First use `useState` and lifted state, then refactor to `useReducer`, then add a theme toggle and cart access through Context.
-- **Checkpoint:** you can decide where a piece of state should live and justify it, and you can say when `useReducer` beats `useState`.
+Learn arrays with worked examples first:
 
-## Phase 4: Escape hatches (1.5–2 weeks)
+- create arrays,
+- read by index,
+- use `.length`,
+- add with `.push()`,
+- remove with `.pop()`,
+- loop with `for`,
+- loop with `for...of`.
 
-This is the hardest phase, so give it the most time.
+Exercise:
 
-- **Read:** the "Escape Hatches" section: refs, manipulating the DOM with refs, synchronizing with Effects, **"You Might Not Need an Effect"**, the lifecycle of reactive effects, and custom hooks.
-- **Practice:** a stopwatch (effects with cleanup), an auto-focus form (refs), and a GitHub user search that calls a real API with loading and error states. Then extract the fetch logic into your own `useFetch` hook, and add a `useLocalStorage` hook.
-- **Checkpoint:** for any `useEffect` you write, you can say what it synchronizes with and why it couldn't be an event handler or derived value instead.
+Make an array of 3 numbers. Add a 4th with `.push()`. Loop through it with
+`for...of` and print each number doubled.
 
-## Phase 5: Performance and modern React (about 1 week)
+ShelfLife task:
 
-- **Read** in the Reference section: `useMemo`, `useCallback`, `memo`, `useId`, `useTransition`, `useDeferredValue`, `Suspense`, `lazy`, and error boundaries. Then read the React 19 pieces: `use`, `useActionState`, `useOptimistic`, and form actions.
-- **Practice:** take a deliberately slow list (5,000 items) and speed it up. Add lazy-loaded pages and an error boundary to an earlier project.
-- **Checkpoint:** you can explain when memoization actually helps and when it's just noise, and you can profile with React DevTools.
+Create an array of books and print each title.
 
-## Phase 6: Frontend ecosystem (2 weeks)
+### Day B - Objects
 
-React alone isn't enough for frontend jobs. Read each tool's own docs:
+Learn:
 
-- **React Router:** real URLs, nested routes, and route params.
-- **Data fetching:** TanStack Query, which handles caching, loading, and errors.
-- **Forms:** controlled forms and validation (React Hook Form is a common choice).
-- **TypeScript with React:** the "Using TypeScript" page on react.dev.
-- **Testing:** Vitest plus React Testing Library.
-- **Accessibility:** semantic HTML, labels, and keyboard navigation.
+- object literals,
+- dot access,
+- bracket access,
+- adding/changing/deleting properties,
+- methods,
+- `this`.
 
-**Practice:** take your banking dashboard project and upgrade it. Replace the `activePage` switch with React Router, load the mock data through fake async calls with TanStack Query, persist transfers and card locks, and write tests for `TransferWizard`.
+Exercise:
 
-## Phase 7: Capstone (1–2 weeks)
+Make a book object with `title`, `author`, and `read`. Add a `toggleRead`
+method that flips `read`. Call it twice and log `read` after each call.
 
-Build one complete app from an empty folder, using routing, server data, forms, and state management. Deploy it (Vercel or Netlify) and write a README. Pick something you'd actually use, for example an expense tracker or a study planner.
+ShelfLife task:
 
-**Checkpoint:** you built it without a tutorial, and you can explain every architectural decision in it.
+Represent one book with title, author, status, rating, and notes.
 
-## Optional next steps
+### Day C - Functions as Values
 
-After Phase 7, look at a framework like Next.js. The React docs themselves recommend frameworks for production apps, but they make much more sense once the fundamentals are solid.
+Learn:
 
-If you'd like, I can turn this into a downloadable document, or expand any phase into a day-by-day plan with specific exercises.
+- function expressions,
+- arrow functions,
+- passing functions as arguments,
+- how filtering works before using `.filter()`.
+
+Exercise:
+
+Write `describe(numbers, testFn)` from scratch. Use it with a function that
+checks whether a number is negative.
+
+ShelfLife task:
+
+Write `keepBooksIf(books, testFn)` and use it to find unread books.
+
+### Days D-G - React-Ready JavaScript
+
+Continue with:
+
+- destructuring,
+- optional chaining,
+- nullish coalescing,
+- spread/rest,
+- immutable updates,
+- `map`,
+- `filter`,
+- `reduce`,
+- closures,
+- modules,
+- promises,
+- `async`/`await`.
+
+Phase 0 capstone:
+
+Build a plain JavaScript ShelfLife engine with pure functions:
+
+- `addBook(state, book)`
+- `deleteBook(state, id)`
+- `markRead(state, id)`
+- `rateBook(state, id, rating)`
+- `filterBooks(state, filters)`
+- `getStats(state)`
+
+Checkpoint:
+
+Explain immutable updates, array transformations, functions as values, and how
+the engine prepares you for React state.
+
+## Phase 1 - Describing the UI
+
+Read react.dev Quick Start, Tic-Tac-Toe, Thinking in React, and Describing the
+UI.
+
+Build ShelfLife v1:
+
+- static book collection,
+- `BookCard`,
+- `BookList`,
+- conditional badges,
+- empty state,
+- stable keys.
+
+Checkpoint:
+
+Explain JSX, components, props, conditional rendering, lists, keys, and pure
+components.
+
+## Phase 2 - Adding Interactivity
+
+Read react.dev Adding Interactivity.
+
+Build ShelfLife v2:
+
+- add-book form,
+- search filter,
+- status filter,
+- star rating,
+- mark as read,
+- delete book,
+- immutable state updates.
+
+Checkpoint:
+
+Explain state as a snapshot, render and commit, event handlers, queued updates,
+and why mutation causes React bugs.
+
+Recall session:
+
+Review everything from Phase 0 through Phase 2 before moving on.
+
+## Phase 3 - Managing State
+
+Read react.dev Managing State.
+
+Build ShelfLife v3:
+
+- convert book actions to `useReducer`,
+- lift shared filter state,
+- add theme context,
+- add library context,
+- preserve/reset state intentionally.
+
+Checkpoint:
+
+Justify where each state value lives and when `useReducer` beats `useState`.
+
+## Phase 4 - Escape Hatches
+
+Read react.dev Escape Hatches, especially "You Might Not Need an Effect".
+
+Build ShelfLife v4:
+
+- Open Library API search,
+- loading and error states,
+- debounced search,
+- `useBookSearch`,
+- `useLocalStorage`,
+- `useRef` auto-focus,
+- cleanup logic.
+
+Checkpoint:
+
+For every effect, explain what it synchronizes with and why it is not better as
+an event handler or derived value.
+
+## Phase 5 - Performance and Modern React
+
+Read react.dev reference pages for `memo`, `useMemo`, `useCallback`, `useId`,
+`useTransition`, `useDeferredValue`, `Suspense`, `lazy`, error boundaries, and
+React 19 form features.
+
+Build ShelfLife v5:
+
+- profile slow filtering,
+- optimize measured bottlenecks,
+- lazy-load details,
+- add error boundary,
+- use transitions where useful.
+
+Checkpoint:
+
+Explain when memoization helps and when it is just overhead.
+
+## Phase 6 - Frontend Ecosystem
+
+Read each tool's docs:
+
+- React Router,
+- TanStack Query,
+- React Hook Form,
+- TypeScript with React,
+- Vitest,
+- React Testing Library,
+- accessibility basics.
+
+Build ShelfLife v6:
+
+- routes,
+- query caching,
+- validated forms,
+- incremental TypeScript,
+- reducer tests,
+- component tests,
+- accessible keyboard behavior.
+
+Checkpoint:
+
+Walk through data flow from search input to rendered result, including loading,
+error, cache, and UI states.
+
+## Phase 7 - Capstone
+
+Deploy ShelfLife or a comparable project.
+
+Requirements:
+
+- useful product problem,
+- real routing,
+- server or API data,
+- forms,
+- state architecture,
+- tests,
+- README,
+- deployment,
+- architecture explanation.
+
+## Progress Tracking
+
+Progress is tracked in `learning-system/progress/PROGRESS.md` with:
+
+- time spent,
+- cumulative hours,
+- active days,
+- module completion,
+- docs read,
+- examples typed,
+- problems attempted,
+- independent solves,
+- hint-assisted solves,
+- checkpoint status,
+- recall score,
+- project features,
+- tests,
+- bugs resolved,
+- refactors,
+- confidence rating,
+- stuck points.
+
+The progress file includes Mermaid line charts, Mermaid pie charts, and an HTML
+table heatmap for daily work.
