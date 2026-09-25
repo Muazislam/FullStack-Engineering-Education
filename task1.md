@@ -1,68 +1,189 @@
-Good. I’m your instructor now, and we’re starting from **Module 0: JavaScript Foundations**.
+## Day B: Objects
 
-Current state: **Module 0, Day A-C area**  
-Checkpoint status: **not passed yet**  
-Today’s target: **Arrays first**, because React depends on arrays constantly: rendering lists, filtering data, updating state, and building components from data.
+Today you will learn how to store related information together using an object.
 
-Before we begin: how much time do you have for this session? 30 min, 60 min, or more?
-
-**Study Sources For Today**
-Use these in this order:
-
-1. [javascript.info - Arrays](https://javascript.info/array)  
-   Read only the parts about creating arrays, accessing items, `.length`, `push`, `pop`, and loops.
-
-2. [MDN - Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)  
-   Use this as a reference, not as your main tutorial.
-
-3. Later, after today: [javascript.info - Array methods](https://javascript.info/array-methods)  
-   Do not start this yet. This is for `map`, `filter`, and `reduce`.
-
-**What To Do Now**
-Open your `practice.js` file or browser console and type this manually. Do not copy-paste:
+An object contains **properties**. Each property has a **key** and a **value**:
 
 ```js
-let books = ["Atomic Habits", "Deep Work", "The Pragmatic Programmer"];
-
-console.log(books[0]);
-console.log(books.length);
-
-books.push("Clean Code");
-console.log(books);
-
-books.pop();
-console.log(books);
-
-for (const book of books) {
-  console.log(book);
-}
+const book = {
+  title: "Deep Work",
+  author: "Cal Newport",
+  read: false
+};
 ```
 
-Then change it:
+Here:
 
-1. Replace the book names with 3 books or courses you actually care about.
-2. Add a 4th item using `.push()`.
-3. Remove the last item using `.pop()`.
-4. Loop through the array and print each title in uppercase.
+- `title`, `author`, and `read` are keys.
+- `"Deep Work"`, `"Cal Newport"`, and `false` are values.
+- The object represents one book.
 
-**Your First Problem**
-After that, solve this without looking at my solution:
+Study these sources first:
+
+- [JavaScript.info: Objects](https://javascript.info/object)
+- [MDN: Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+
+Type the examples yourself. Do not copy and paste them.
+
+### Part 1: Reading properties
+
+You can read a property using dot notation:
+
+```js
+console.log(book.title);
+console.log(book.author);
+```
+
+You can also use bracket notation:
+
+```js
+console.log(book["title"]);
+```
+
+Your task:
 
 ```text
-Make an array of 3 numbers.
-Add a 4th number with .push().
-Loop through the array with for...of.
-Print each number doubled.
+Create an object called person with:
+- name
+- age
+- city
+
+Print the name using dot notation.
+Print the city using bracket notation.
 ```
 
-When you reply, send me:
+Before running it, predict what each `console.log` will print.
 
-1. How much time you have today.
-2. Your code.
-3. Your thinking:
-   - What is the array storing?
-   - What does `.push()` do?
-   - What does `for...of` give you each time?
-   - Where did you double the number?
+### Part 2: Changing a property
 
-I’ll check your reasoning first, then the code.
+Objects can be changed after creation:
+
+```js
+book.read = true;
+console.log(book.read);
+```
+
+Your task:
+
+```text
+Create a movie object with:
+- title
+- watched set to false
+
+Change watched to true.
+Print watched before and after changing it.
+```
+
+Think carefully about the difference between:
+
+```js
+movie.watched = false;
+movie.watched = true;
+```
+
+The first assigns a value. The second replaces it.
+
+### Part 3: Adding and deleting properties
+
+You can add a new property:
+
+```js
+book.rating = 5;
+```
+
+You can delete a property:
+
+```js
+delete book.rating;
+```
+
+Your task:
+
+```text
+Create a laptop object with:
+- brand
+- model
+
+Add a price property.
+Print the object.
+Delete the model property.
+Print the object again.
+```
+
+### Part 4: Methods
+
+A function stored inside an object is called a method:
+
+```js
+const user = {
+  name: "Ali",
+
+  greet: function() {
+    return "Hello, " + this.name;
+  }
+};
+
+console.log(user.greet());
+```
+
+`this.name` means “the `name` property belonging to this object.”
+
+Your task:
+
+```text
+Create a book object with:
+- title
+- read set to false
+- a method called toggleRead
+
+toggleRead should change read from false to true,
+or from true to false.
+```
+
+Hint:
+
+```js
+this.read = !this.read;
+```
+
+Call the method twice:
+
+```text
+Print read.
+Call toggleRead.
+Print read.
+Call toggleRead again.
+Print read.
+```
+
+Expected pattern:
+
+```text
+false
+true
+false
+```
+
+## Day B checkpoint
+
+Complete this final problem without looking at the examples:
+
+```text
+Create a `libraryBook` object with:
+- title
+- author
+- read set to false
+- pages
+- a `toggleRead` method
+
+Then:
+
+1. Print the title using dot notation.
+2. Print the author using bracket notation.
+3. Add a `rating` property.
+4. Call `toggleRead`.
+5. Print the complete object.
+6. Explain what changed.
+```
+
+Send me your code, predicted output, and explanation. Also tell me where you felt uncertain.
