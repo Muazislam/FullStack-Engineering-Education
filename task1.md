@@ -1,189 +1,59 @@
-## Day B: Objects
+Good. Day B is corrected and accepted.
 
-Today you will learn how to store related information together using an object.
+We are starting the Day B recall session. This session checks whether you can retrieve the knowledge without following the lesson examples.
 
-An object contains **properties**. Each property has a **key** and a **value**:
+Please tell me how much time you have available now. Then answer these questions without running the code first.
+
+### Recall 1: Arrays
+
+What will this print, and why?
+
+```js
+const numbers = [2, 4, 6];
+const newLength = numbers.push(8);
+
+console.log(numbers);
+console.log(newLength);
+```
+
+### Recall 2: Objects
+
+What will this print?
 
 ```js
 const book = {
-  title: "Deep Work",
-  author: "Cal Newport",
+  title: "Clean Code",
   read: false
 };
-```
 
-Here:
-
-- `title`, `author`, and `read` are keys.
-- `"Deep Work"`, `"Cal Newport"`, and `false` are values.
-- The object represents one book.
-
-Study these sources first:
-
-- [JavaScript.info: Objects](https://javascript.info/object)
-- [MDN: Working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
-
-Type the examples yourself. Do not copy and paste them.
-
-### Part 1: Reading properties
-
-You can read a property using dot notation:
-
-```js
-console.log(book.title);
-console.log(book.author);
-```
-
-You can also use bracket notation:
-
-```js
-console.log(book["title"]);
-```
-
-Your task:
-
-```text
-Create an object called person with:
-- name
-- age
-- city
-
-Print the name using dot notation.
-Print the city using bracket notation.
-```
-
-Before running it, predict what each `console.log` will print.
-
-### Part 2: Changing a property
-
-Objects can be changed after creation:
-
-```js
 book.read = true;
-console.log(book.read);
+book.rating = 4.5;
+
+console.log(book);
 ```
 
-Your task:
+### Recall 3: Methods and `this`
 
-```text
-Create a movie object with:
-- title
-- watched set to false
-
-Change watched to true.
-Print watched before and after changing it.
-```
-
-Think carefully about the difference between:
+Complete the missing method:
 
 ```js
-movie.watched = false;
-movie.watched = true;
-```
+const account = {
+  owner: "Muaz",
+  active: false,
 
-The first assigns a value. The second replaces it.
-
-### Part 3: Adding and deleting properties
-
-You can add a new property:
-
-```js
-book.rating = 5;
-```
-
-You can delete a property:
-
-```js
-delete book.rating;
-```
-
-Your task:
-
-```text
-Create a laptop object with:
-- brand
-- model
-
-Add a price property.
-Print the object.
-Delete the model property.
-Print the object again.
-```
-
-### Part 4: Methods
-
-A function stored inside an object is called a method:
-
-```js
-const user = {
-  name: "Ali",
-
-  greet: function() {
-    return "Hello, " + this.name;
-  }
+  // Add a method named toggleActive here.
+  // It should switch active between true and false.
 };
 
-console.log(user.greet());
+account.toggleActive();
+
+console.log(account.active);
 ```
 
-`this.name` means “the `name` property belonging to this object.”
+For each answer, share:
 
-Your task:
+1. Your predicted output.
+2. Your reasoning.
+3. Your confidence from 1 to 5.
 
-```text
-Create a book object with:
-- title
-- read set to false
-- a method called toggleRead
-
-toggleRead should change read from false to true,
-or from true to false.
-```
-
-Hint:
-
-```js
-this.read = !this.read;
-```
-
-Call the method twice:
-
-```text
-Print read.
-Call toggleRead.
-Print read.
-Call toggleRead again.
-Print read.
-```
-
-Expected pattern:
-
-```text
-false
-true
-false
-```
-
-## Day B checkpoint
-
-Complete this final problem without looking at the examples:
-
-```text
-Create a `libraryBook` object with:
-- title
-- author
-- read set to false
-- pages
-- a `toggleRead` method
-
-Then:
-
-1. Print the title using dot notation.
-2. Print the author using bracket notation.
-3. Add a `rating` property.
-4. Call `toggleRead`.
-5. Print the complete object.
-6. Explain what changed.
-```
-
-Send me your code, predicted output, and explanation. Also tell me where you felt uncertain.
+After this recall, I will give you one small combined problem using arrays and objects.
