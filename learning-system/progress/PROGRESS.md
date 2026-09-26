@@ -1,6 +1,6 @@
 # Progress Dashboard
 
-Last updated: 2026-09-23
+Last updated: 2026-09-26
 
 ## Current State
 
@@ -8,12 +8,12 @@ Last updated: 2026-09-23
 |---|---:|
 | Current module | Module 0 - JavaScript Foundations |
 | Current focus | Arrays, objects, functions as values |
-| Module completion | 10% |
-| Total time spent | 0 minutes |
-| Active days | 0 |
-| Sessions completed | 0 |
-| Recall sessions completed | 0 |
-| Checkpoints passed | 0 |
+| Module completion | 18% |
+| Total time spent | 30 minutes |
+| Active days | 1 |
+| Sessions completed | 1 |
+| Recall sessions completed | 1 |
+| Checkpoints passed | 1 |
 | Project features completed | 0 |
 
 ## Metrics To Track
@@ -41,7 +41,7 @@ Last updated: 2026-09-23
 
 | Module | Status | Completion | Time Spent |
 |---|---:|---:|---:|
-| Module 0 - JavaScript Foundations | `[~]` | 10% | 0 min |
+| Module 0 - JavaScript Foundations | `[~]` | 18% | 30 min |
 | Module 1 - Describing the UI | `[ ]` | 0% | 0 min |
 | Module 2 - Adding Interactivity | `[ ]` | 0% | 0 min |
 | Module 3 - Managing State | `[ ]` | 0% | 0 min |
@@ -72,24 +72,24 @@ Update the chart values after each session.
 ```mermaid
 xychart-beta
   title "Cumulative Study Time"
-  x-axis ["Start"]
+  x-axis ["Start", "2026-09-26"]
   y-axis "Minutes" 0 --> 60
-  line [0]
+  line [0, 30]
 ```
 
 ### Progress Pie Graph
 
 ```mermaid
 pie title Overall Curriculum Progress
-  "Completed" : 0
-  "Remaining" : 100
+  "Completed" : 18
+  "Remaining" : 82
 ```
 
 ### Time By Module Pie Graph
 
 ```mermaid
 pie title Time Spent By Module
-  "Module 0" : 1
+  "Module 0" : 30
   "Other Modules" : 0
 ```
 
@@ -111,18 +111,19 @@ Use intensity values:
     <th>Heat</th>
   </tr>
   <tr>
-    <td>2026-09-23</td>
-    <td>0</td>
-    <td>0</td>
-    <td style="background:#ebedf0;width:80px;">&nbsp;</td>
+    <td>2026-09-26</td>
+    <td>30</td>
+    <td>1</td>
+    <td style="background:#9be9a8;width:80px;">&nbsp;</td>
   </tr>
 </table>
 
 ## Current Stuck Points
 
-- None logged yet.
+- `push()` returns the new array length, not the pushed value.
+- Array-of-object syntax: use `books.push({ ... })` and access an object with `books[0]`.
+- Continue reinforcing `return` versus a method that only mutates an object.
 
 ## Next Session Target
 
-Complete Day A, Day B, and Day C exercises from Module 0, then explain the
-approach before receiving corrections.
+Complete the Day C functions-as-values exercise, then begin its checkpoint.

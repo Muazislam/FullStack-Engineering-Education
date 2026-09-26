@@ -1,49 +1,47 @@
-Excellent. All three recall answers are correct.
+Yes, this is a good method for you, especially because you learn better by seeing a concept work before reading its full theory. It is often called a practice-first or example-first approach.
 
-Your reasoning is also accurate:
+Keep using it, but add three steps so you do not only memorize patterns:
 
-- `numbers` is mutated by `push`, so it becomes `[2, 4, 6, 8]`.
-- `newLength` receives `4`, the array’s new length.
-- `book.read` changes to `true`, and `rating` is added.
-- `this.active = !this.active` is equivalent to changing `account.active` to its opposite value.
+1. Read the documentation heading and one small example.
+2. Predict what the code will do before running it.
+3. Change one thing and observe the result.
+4. Explain the behavior in your own words.
+5. Solve a small problem without looking at the example.
 
-One small wording detail: the console usually displays the object as:
-
-```js
-{ title: "Clean Code", read: true, rating: 4.5 }
-```
-
-It does not literally include `book =`; that was just your way of describing the object.
-
-Recall session passed.
-
-Now complete this combined problem without copying earlier examples:
+For example, with arrays:
 
 ```js
-const books = [
-  {
-    title: "Clean Code",
-    read: false
-  },
-  {
-    title: "Deep Work",
-    read: true
-  }
-];
+books.push({
+  title: "The Pragmatic Programmer",
+  read: false
+});
 ```
 
-Your tasks:
+Do not stop at “this adds an object.” Also test:
 
-1. Add a third book object.
-2. Add a `rating` property to the first book.
-3. Change the second book’s `read` value to `false`.
-4. Use `for...of` to print each book’s title.
-5. Print the complete `books` array.
+- What does `books.push(...)` return?
+- What happens to `books.length`?
+- What index does the new object receive?
+- What happens if you push two objects?
+- Can you access the new object with `books[2]`?
 
-Before running it, send me:
+That turns reading into understanding.
 
-- Your code.
-- Your predicted final array.
-- Your step-by-step reasoning.
-- Your confidence from 1 to 5.
-- How much study time you have remaining today.
+Because your time is limited, use focused sessions:
+
+- 5 minutes: read one documentation section.
+- 10 minutes: type and modify examples.
+- 10 minutes: solve one problem from memory.
+- 5 minutes: explain what you learned and record your confusion.
+
+Do not read an entire documentation page from beginning to end every time. JavaScript documentation is a reference library, not always a beginner-friendly lesson. Read only the heading and subsection related to the problem, then return to the theory after experimenting.
+
+Your current learning pattern is beneficial because you are:
+
+- writing code yourself;
+- making predictions;
+- encountering genuine errors;
+- asking why the code behaves that way;
+- explaining your reasoning.
+
+Those are strong signs of active learning. Continue with this approach. I will support it by giving you a relevant documentation section, a small worked example when necessary, and then a problem that you must solve independently.
