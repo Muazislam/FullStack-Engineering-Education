@@ -1,0 +1,449 @@
+# Software Engineering Learning
+
+A structured record of my software engineering journey, documenting the progression from programming fundamentals to full-stack development, backend engineering, databases, software architecture, systems, DevOps, and related engineering disciplines.
+
+This repository is primarily a **learning record and engineering knowledge base**.
+
+It is not intended to represent a single production application or to optimize for GitHub activity.
+
+---
+
+## Purpose
+
+The purpose of this repository is to document the development of my technical understanding over time.
+
+Rather than treating technologies as isolated courses, the learning process is organized around:
+
+```text
+Documentation
+      ↓
+Understanding
+      ↓
+Implementation
+      ↓
+Problem Solving
+      ↓
+Project Application
+      ↓
+Testing
+      ↓
+Debugging
+      ↓
+Refactoring
+      ↓
+Recall
+```
+
+The objective is to develop the ability to understand systems, make engineering decisions, solve unfamiliar problems, and build software—not simply to complete tutorials.
+
+---
+
+# Engineering Scope
+
+This repository will progressively cover multiple areas of software engineering.
+
+## Current
+
+### JavaScript
+
+* language fundamentals
+* arrays and objects
+* functions
+* higher-order functions
+* destructuring
+* optional chaining
+* nullish coalescing
+* spread and rest
+* array transformations
+* closures
+* modules
+* promises
+* asynchronous programming
+
+### React
+
+* JSX
+* components
+* props
+* state
+* events
+* conditional rendering
+* lists and keys
+* state architecture
+* reducers
+* context
+* effects
+* refs
+* custom hooks
+* performance
+* modern React APIs
+
+---
+
+## Planned
+
+### Frontend Engineering
+
+* TypeScript
+* routing
+* forms
+* data fetching
+* caching
+* accessibility
+* testing
+* performance
+* frontend architecture
+
+### Backend Engineering
+
+* HTTP
+* REST APIs
+* authentication
+* authorization
+* validation
+* error handling
+* server architecture
+* asynchronous processing
+* API design
+* security
+
+### Databases
+
+* relational databases
+* SQL
+* PostgreSQL
+* schema design
+* normalization
+* indexes
+* transactions
+* constraints
+* query optimization
+* data modeling
+* database architecture
+
+### Software Engineering
+
+* clean code
+* modularity
+* abstraction
+* separation of concerns
+* testing
+* debugging
+* refactoring
+* version control
+* software design
+* maintainability
+* technical documentation
+
+### Systems and Architecture
+
+* system design
+* scalability
+* reliability
+* distributed systems
+* caching
+* messaging
+* queues
+* concurrency
+* networking
+* observability
+* system architecture
+
+### DevOps and Infrastructure
+
+* Linux
+* Git
+* Docker
+* CI/CD
+* cloud platforms
+* infrastructure
+* deployment
+* monitoring
+* operational reliability
+
+The exact scope will evolve as the learning progresses.
+
+---
+
+# Learning Method
+
+New concepts generally follow this process:
+
+### 1. Study the documentation
+
+Primary technical references are used whenever possible.
+
+Examples include:
+
+* MDN
+* JavaScript.info
+* React documentation
+* official framework documentation
+* official database documentation
+* standards and technical specifications
+* reputable engineering literature
+
+### 2. Implement
+
+Examples are typed and modified rather than passively consumed.
+
+### 3. Solve
+
+The concept is tested through problems that require independent reasoning.
+
+### 4. Explain
+
+Understanding is tested by explaining the behavior, trade-offs, and reasoning behind the implementation.
+
+### 5. Apply
+
+The concept is incorporated into a larger project or engineering exercise.
+
+### 6. Test and debug
+
+The implementation is examined through tests, edge cases, failures, and debugging.
+
+### 7. Refactor
+
+Earlier implementations are revisited as understanding improves.
+
+### 8. Recall
+
+Previously learned material is revisited to measure retention rather than relying on recognition.
+
+---
+
+# Learning System
+
+The repository tracks more than study time.
+
+Metrics include:
+
+```text
+time spent
+active days
+documentation studied
+worked examples
+problems attempted
+independent solutions
+hint-assisted solutions
+concepts explained
+recall performance
+checkpoint results
+project features
+tests written
+bugs resolved
+refactors completed
+confidence
+stuck points
+```
+
+The purpose of these measurements is to understand **capability development**, not to maximize activity.
+
+A large number of commits does not constitute evidence of engineering competence by itself.
+
+---
+
+# Repository Structure
+
+```text
+.
+├── learning-system/
+│   ├── curriculum/
+│   ├── progress/
+│   ├── sessions/
+│   ├── checkpoints/
+│   ├── recall/
+│   └── instructor/
+│
+├── javascript/
+│   ├── fundamentals/
+│   ├── functions/
+│   ├── objects/
+│   ├── arrays/
+│   ├── asynchronous-javascript/
+│   └── modules/
+│
+├── react/
+│   ├── fundamentals/
+│   ├── state/
+│   ├── effects/
+│   ├── hooks/
+│   ├── performance/
+│   └── modern-react/
+│
+├── frontend/
+│
+├── backend/
+│
+├── databases/
+│
+├── software-engineering/
+│
+├── system-design/
+│
+├── devops/
+│
+└── projects/
+```
+
+Directories may be introduced as the corresponding areas become part of the curriculum.
+
+The repository is therefore expected to evolve significantly over time.
+
+---
+
+# Main Learning Project
+
+## ShelfLife
+
+`ShelfLife` is the primary project currently used to turn JavaScript and React concepts into practical software.
+
+It begins with JavaScript data manipulation and progressively develops toward a more complete application involving:
+
+* book data
+* filtering
+* search
+* state management
+* forms
+* API integration
+* persistence
+* routing
+* testing
+* accessibility
+* performance
+* deployment
+
+The project is deliberately used as an application environment for concepts learned throughout the curriculum.
+
+The repository may contain the learning material and intermediate implementations, while substantial portfolio projects may eventually be maintained in dedicated repositories.
+
+---
+
+# Current Stage
+
+**Current focus:** JavaScript Foundations
+
+**Current topics:**
+
+* arrays
+* objects
+* functions as values
+
+**Current progress:** 18%
+
+**Recorded learning time:** 30 minutes
+
+**Checkpoint status:** 1 checkpoint passed
+
+**Next target:**
+
+Complete the functions-as-values exercise and begin the associated checkpoint.
+
+Current concepts requiring reinforcement include:
+
+* `push()` return values
+* arrays of objects
+* indexing objects inside arrays
+* `return` versus mutation
+
+---
+
+# Progress Philosophy
+
+The repository intentionally avoids treating course completion or commit count as the primary measure of progress.
+
+A concept is considered stronger when it can be:
+
+1. understood from documentation,
+2. implemented without copying,
+3. modified successfully,
+4. applied to a problem,
+5. explained clearly,
+6. used in a project,
+7. recalled later.
+
+The emphasis is therefore:
+
+```text
+Activity
+    ≠
+Capability
+```
+
+and:
+
+```text
+Capability
+    =
+Understanding
++ Independent Problem Solving
++ Application
++ Retention
+```
+
+---
+
+# Long-Term Direction
+
+The intended progression is approximately:
+
+```text
+Programming Fundamentals
+        ↓
+JavaScript
+        ↓
+React / Frontend
+        ↓
+Full-Stack Development
+        ↓
+Backend Engineering
+        ↓
+Databases
+        ↓
+Software Engineering
+        ↓
+System Design
+        ↓
+Linux / DevOps / Cloud
+        ↓
+Larger Systems and Production Engineering
+```
+
+This is not a rigid technology checklist.
+
+The sequence will change when project requirements, engineering problems, or gaps in understanding require a different direction.
+
+---
+
+# What This Repository Is Not
+
+This repository is not intended to be:
+
+* a collection of tutorial completions,
+* a GitHub contribution challenge,
+* a collection of artificially generated commits,
+* a substitute for substantial software projects,
+* a claim of production expertise.
+
+The repository documents the **process of becoming capable**.
+
+Actual portfolio projects should demonstrate the resulting capability through working software, architecture, testing, documentation, and deployment.
+
+---
+
+# Engineering Principle
+
+> Build understanding that survives outside the tutorial.
+
+The long-term objective is not to remember every API.
+
+It is to become capable of entering an unfamiliar codebase, understanding the system, consulting the right documentation, forming a reasonable approach, implementing it, testing it, debugging it, and improving the design when necessary.
+
+---
+
+## Status
+
+This repository is continuously evolving.
+
+The structure, curriculum, projects, and areas of study will change as the scope of the software engineering journey expands.
