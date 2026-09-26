@@ -1,59 +1,49 @@
-Good. Day B is corrected and accepted.
+Excellent. All three recall answers are correct.
 
-We are starting the Day B recall session. This session checks whether you can retrieve the knowledge without following the lesson examples.
+Your reasoning is also accurate:
 
-Please tell me how much time you have available now. Then answer these questions without running the code first.
+- `numbers` is mutated by `push`, so it becomes `[2, 4, 6, 8]`.
+- `newLength` receives `4`, the array’s new length.
+- `book.read` changes to `true`, and `rating` is added.
+- `this.active = !this.active` is equivalent to changing `account.active` to its opposite value.
 
-### Recall 1: Arrays
-
-What will this print, and why?
-
-```js
-const numbers = [2, 4, 6];
-const newLength = numbers.push(8);
-
-console.log(numbers);
-console.log(newLength);
-```
-
-### Recall 2: Objects
-
-What will this print?
+One small wording detail: the console usually displays the object as:
 
 ```js
-const book = {
-  title: "Clean Code",
-  read: false
-};
-
-book.read = true;
-book.rating = 4.5;
-
-console.log(book);
+{ title: "Clean Code", read: true, rating: 4.5 }
 ```
 
-### Recall 3: Methods and `this`
+It does not literally include `book =`; that was just your way of describing the object.
 
-Complete the missing method:
+Recall session passed.
+
+Now complete this combined problem without copying earlier examples:
 
 ```js
-const account = {
-  owner: "Muaz",
-  active: false,
-
-  // Add a method named toggleActive here.
-  // It should switch active between true and false.
-};
-
-account.toggleActive();
-
-console.log(account.active);
+const books = [
+  {
+    title: "Clean Code",
+    read: false
+  },
+  {
+    title: "Deep Work",
+    read: true
+  }
+];
 ```
 
-For each answer, share:
+Your tasks:
 
-1. Your predicted output.
-2. Your reasoning.
-3. Your confidence from 1 to 5.
+1. Add a third book object.
+2. Add a `rating` property to the first book.
+3. Change the second book’s `read` value to `false`.
+4. Use `for...of` to print each book’s title.
+5. Print the complete `books` array.
 
-After this recall, I will give you one small combined problem using arrays and objects.
+Before running it, send me:
+
+- Your code.
+- Your predicted final array.
+- Your step-by-step reasoning.
+- Your confidence from 1 to 5.
+- How much study time you have remaining today.

@@ -1,44 +1,34 @@
-const numbers = [2, 4, 6];
-const newLength = numbers.push(8);
-
-console.log(numbers); // THis prints [2, 4, 6, 8] beause it gives out complete array
-// and we are printing array after pushing 8 so, the changes are being reflected
-console.log(newLength); // This prints 4 because when we assign a variable to the push operation , it gives out length of the array.
-
-
-const book = {
-  title: "Clean Code",
-  read: false
-};
-
-book.read = true;
-book.rating = 4.5;
-
-console.log(book);
+const books = [
+  {
+    title: "Clean Code",
+    read: false,
+  },
+  {
+    title: "Deep Work",
+    read: true,
+  },
+];
+books.obj3 = { title: "THe pragmatic programmer", read: false };
 /*
-This will print an object like:
-book = { title: 'Clean Code', read: true, rating: 4.5}
+This is the output on console.log
+Array [ {…}, {…} ]
+​
+0: Object { title: "Clean Code", read: false }
+​
+1: Object { title: "Deep Work", read: true }
+​
+length: 2
+​
+obj3: Object { title: "THe pragmatic programmer", read: false }
+​
+<prototype>: Array []
+script.js:14:9
 
-This output willl happen because we change the read property from false to true
-and we introduce a new property called rating.
-*/
-
-const account = {
-  owner: "Muaz",
-  active: false,
-  
-  toggleActive: function() {
-    this.active = !this.active;
-  }
-};
-
-account.toggleActive();
-
-console.log(account.active);
-
-/*
-This gives an output of true for active property. Because the this keyword acts like
-account.active = !account.active;
-And the active changes from false to true because of NOT operation '!'.
 
 */
+// books.'0'.rating = 8.09; // i am not able to access the first object. i don't know the syntax.
+console.log(books);
+
+// for (let book of books) {
+//   console.log(book); // but it is not showing the third object i createdd
+// }
