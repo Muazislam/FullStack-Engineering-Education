@@ -58,7 +58,7 @@ times which is
  number * number
 
 */
-meow = square(3);
+let meow = square(3);
 console.log(meow);
 
 function myFunc(theObject) {
@@ -104,7 +104,7 @@ happening to the object that are passed from outside the function or
  to any to simple values as well.
 */
 
-function myFunc(theArr) {
+function myFunc1(theArr) {
   theArr[0] = 30;
 }
 const arr = [45];
@@ -177,7 +177,7 @@ console.log(factorial(3)); // 6
 // ----
 
 // function can be defined with a condition.
-let num =0;
+let num = 0;
 let myFunc2;
 if (num === 0) {
   myFunc2 = function (theObject) {
