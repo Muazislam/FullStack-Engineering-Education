@@ -8,12 +8,12 @@ Last updated: 2026-09-27
 |---|---:|
 | Current module | Module 0 - JavaScript Foundations |
 | Current focus | Day C repair: function scope, declarations, expressions, and arrow functions |
-| Module completion | 28% |
+| Module completion | 38% |
 | Total time spent | 240 minutes (4 hours) |
 | Active days | 2 |
 | Sessions completed | 2 |
 | Recall sessions completed | 1 |
-| Checkpoints passed | 1 |
+| Checkpoints passed | 2 |
 | Project features completed | 0 |
 
 ## Metrics To Track
@@ -41,7 +41,7 @@ Last updated: 2026-09-27
 
 | Module | Status | Completion | Time Spent |
 |---|---:|---:|---:|
-| Module 0 - JavaScript Foundations | `[~]` | 28% | 240 min |
+| Module 0 - JavaScript Foundations | `[~]` | 38% | 240 min |
 | Module 1 - Describing the UI | `[ ]` | 0% | 0 min |
 | Module 2 - Adding Interactivity | `[ ]` | 0% | 0 min |
 | Module 3 - Managing State | `[ ]` | 0% | 0 min |
@@ -81,8 +81,8 @@ xychart-beta
 
 ```mermaid
 pie title Overall Curriculum Progress
-  "Completed" : 28
-  "Remaining" : 72
+  "Completed" : 38
+  "Remaining" : 62
 ```
 
 ### Time By Module Pie Graph
@@ -137,4 +137,4 @@ Use intensity values:
 
 ## Next Session Target
 
-Repair the Day C code with `const`, nested-function scope, and a short comparison of regular methods versus arrow functions; then begin the checkpoint.
+Begin Day D: destructuring, default values, optional chaining, and nullish coalescing.

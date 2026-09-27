@@ -56,6 +56,6 @@ No learning sessions logged yet.
 **Student reasoning summary:** Correctly identified parameters, arguments, `return`, function declarations, expressions, and the basic arrow-function transformation. Correctly observed that mutating an object or array inside a function is visible outside it. The explanation currently confuses a parameter with `this`, and treats the passed object as if it were replaced by `this`.  
 **Instructor feedback:** Day C core task passed. Repair needed: `meow` must be declared; `square` inside `addsquares` is out of scope outside that function; the duplicate `myFunc` name overwrites the earlier function; and arrow functions do not have their own dynamic `this`. The file also contains `console.log(square(6))`, which stops execution because `square` is nested.  
 **Project changes:** None yet; the ShelfLife engine begins after the JavaScript foundation checkpoint.  
-**Checkpoint or recall result:** Day C task pass; checkpoint not yet attempted  
+**Checkpoint or recall result:** Day C task pass; checkpoint passed after correction  
 **Metrics update:** 210 minutes, 2 active days, 2 sessions, 1 recall session, 1 checkpoint passed, 2 documentation sources, multiple worked examples, 1 Day C task solved independently, confidence not recorded; cumulative total now 240 minutes (4 hours).  
-**Revisit next time:** Scope, undeclared variables, duplicate names, parameter versus `this`, and regular versus arrow methods.  
+**Revisit next time:** Scope, undeclared variables, duplicate names, parameter versus `this`, regular versus arrow methods, and object mutation versus method context. Begin Day D next.  
