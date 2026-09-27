@@ -1,17 +1,17 @@
 # Progress Dashboard
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
 
 ## Current State
 
 | Metric | Value |
 |---|---:|
 | Current module | Module 0 - JavaScript Foundations |
-| Current focus | Arrays, objects, functions as values |
-| Module completion | 18% |
-| Total time spent | 30 minutes |
-| Active days | 1 |
-| Sessions completed | 1 |
+| Current focus | Day C repair: function scope, declarations, expressions, and arrow functions |
+| Module completion | 28% |
+| Total time spent | 240 minutes (4 hours) |
+| Active days | 2 |
+| Sessions completed | 2 |
 | Recall sessions completed | 1 |
 | Checkpoints passed | 1 |
 | Project features completed | 0 |
@@ -41,7 +41,7 @@ Last updated: 2026-09-26
 
 | Module | Status | Completion | Time Spent |
 |---|---:|---:|---:|
-| Module 0 - JavaScript Foundations | `[~]` | 18% | 30 min |
+| Module 0 - JavaScript Foundations | `[~]` | 28% | 240 min |
 | Module 1 - Describing the UI | `[ ]` | 0% | 0 min |
 | Module 2 - Adding Interactivity | `[ ]` | 0% | 0 min |
 | Module 3 - Managing State | `[ ]` | 0% | 0 min |
@@ -72,24 +72,24 @@ Update the chart values after each session.
 ```mermaid
 xychart-beta
   title "Cumulative Study Time"
-  x-axis ["Start", "2026-09-26"]
-  y-axis "Minutes" 0 --> 60
-  line [0, 30]
+  x-axis ["Start", "2026-09-26", "2026-09-27"]
+  y-axis "Minutes" 0 --> 300
+  line [0, 30, 240]
 ```
 
 ### Progress Pie Graph
 
 ```mermaid
 pie title Overall Curriculum Progress
-  "Completed" : 18
-  "Remaining" : 82
+  "Completed" : 28
+  "Remaining" : 72
 ```
 
 ### Time By Module Pie Graph
 
 ```mermaid
 pie title Time Spent By Module
-  "Module 0" : 30
+  "Module 0" : 240
   "Other Modules" : 0
 ```
 
@@ -116,6 +116,12 @@ Use intensity values:
     <td>1</td>
     <td style="background:#9be9a8;width:80px;">&nbsp;</td>
   </tr>
+  <tr>
+    <td>2026-09-27</td>
+    <td>210</td>
+    <td>4</td>
+    <td style="background:#216e39;width:80px;">&nbsp;</td>
+  </tr>
 </table>
 
 ## Current Stuck Points
@@ -123,7 +129,12 @@ Use intensity values:
 - `push()` returns the new array length, not the pushed value.
 - Array-of-object syntax: use `books.push({ ... })` and access an object with `books[0]`.
 - Continue reinforcing `return` versus a method that only mutates an object.
+- A variable assigned without `let`, `const`, or `var` can leak into global scope; use `const` or `let`.
+- A nested function is scoped to its outer function; `square()` cannot be called outside `addsquares()`.
+- Passing an object or array lets a function mutate the shared value, but the parameter itself is local; this is not `this`.
+- Arrow functions can be object methods, but they do not get a dynamic `this` like method shorthand or a regular function.
+- Avoid duplicate function names in one scope because later declarations replace earlier ones.
 
 ## Next Session Target
 
-Complete the Day C functions-as-values exercise, then begin its checkpoint.
+Repair the Day C code with `const`, nested-function scope, and a short comparison of regular methods versus arrow functions; then begin the checkpoint.
