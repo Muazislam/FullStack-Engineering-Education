@@ -9,7 +9,7 @@ Last updated: 2026-09-27
 | Current module | Module 0 - JavaScript Foundations |
 | Current focus | Day C repair: function scope, declarations, expressions, and arrow functions |
 | Module completion | 38% |
-| Total time spent | 240 minutes (4 hours) |
+| Total time spent | 300 minutes (5 hours) |
 | Active days | 2 |
 | Sessions completed | 2 |
 | Recall sessions completed | 1 |
@@ -74,7 +74,7 @@ xychart-beta
   title "Cumulative Study Time"
   x-axis ["Start", "2026-09-26", "2026-09-27"]
   y-axis "Minutes" 0 --> 300
-  line [0, 30, 240]
+  line [0, 30, 300]
 ```
 
 ### Progress Pie Graph
@@ -89,7 +89,7 @@ pie title Overall Curriculum Progress
 
 ```mermaid
 pie title Time Spent By Module
-  "Module 0" : 240
+  "Module 0" : 300
   "Other Modules" : 0
 ```
 
@@ -118,7 +118,7 @@ Use intensity values:
   </tr>
   <tr>
     <td>2026-09-27</td>
-    <td>210</td>
+    <td>270</td>
     <td>4</td>
     <td style="background:#216e39;width:80px;">&nbsp;</td>
   </tr>

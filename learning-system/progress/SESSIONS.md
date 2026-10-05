@@ -59,3 +59,21 @@ No learning sessions logged yet.
 **Checkpoint or recall result:** Day C task pass; checkpoint passed after correction  
 **Metrics update:** 210 minutes, 2 active days, 2 sessions, 1 recall session, 1 checkpoint passed, 2 documentation sources, multiple worked examples, 1 Day C task solved independently, confidence not recorded; cumulative total now 240 minutes (4 hours).  
 **Revisit next time:** Scope, undeclared variables, duplicate names, parameter versus `this`, regular versus arrow methods, and object mutation versus method context. Begin Day D next.  
+
+## 2026-09-27 - Day C Checkpoint Follow-up
+
+**Date:** 2026-09-27  
+**Duration:** 60 minutes  
+**Module / topic:** Module 0 - JavaScript Foundations; Day C checkpoint correction  
+**Type:** checkpoint follow-up  
+**Documentation used:** None recorded  
+**Worked examples typed:** Arrow function stored as an object property and explicit access through `user.name`  
+**Problems attempted:** Corrected the arrow-function greeting and explained object mutation versus `this`  
+**Problems solved independently:** Both checkpoint corrections  
+**Problems solved with hints:** None  
+**Student reasoning summary:** Correctly explained that an arrow function can be stored as an object property while its `this` is lexical. Correctly separated object mutation from method-call context.  
+**Instructor feedback:** Day C checkpoint passed.  
+**Project changes:** None yet; Day D begins next.  
+**Checkpoint or recall result:** pass  
+**Metrics update:** 60 minutes added; cumulative total now 300 minutes (5 hours); 2 active days; 3 logged sessions; 2 checkpoints passed.  
+**Revisit next time:** Begin Day D.  
