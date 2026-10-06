@@ -1,67 +1,44 @@
 /*
-We have an object:
+Create these objects:
 
-let user = {
-  name: "John",
-  years: 30
+const book1 = {
+  title: "Clean Code",
+  author: "Robert C. Martin"
 };
 
-Write the destructuring assignment that reads:
-
-    name property into the variable name.
-    years property into the variable age.
-    isAdmin property into the variable isAdmin (false, if no such property)
-
-*/
-
-let user = {
-  name: "John",
-  years: 30,
+const book2 = {
+  title: "Deep Work",
+  author: "Cal Newport",
+  rating: 0
 };
 
-let { name, years: age, isAdmin = false } = user;
+Destructure rating with a default value of "Not rated".
 
-console.log(name);
-console.log(age);
-console.log(isAdmin);
+Predict what happens for:
 
-//-------------------------------------------------------------------
+book1
+book2
+Pay special attention to whether the default replaces 0.
 
-/*
-There is a salaries object:
+//--------------------------------------------------------------------
 
-let salaries = {
-  "John": 100,
-  "Pete": 300,
-  "Mary": 250
+const book1 = {
+  title: "Clean Code",
+  author: "Robert C. Martin",
 };
 
-Create the function topSalary(salaries) that returns the name of the top-paid person.
+const book2 = {
+  title: "Deep Work",
+  author: "Cal Newport",
+  rating: 0,
+};
 
-    If salaries is empty, it should return null.
-    If there are multiple top-paid persons, return any of them.
+let { title, author, rating = "Not rated" } = book2;
 
-P.S. Use Object.entries and destructuring to iterate over key/value pairs.
+console.log(title);
+console.log(author);
+console.log(rating); // The default rating value did not replace zero. The zero from the object persists, despite the default value. I would think that the default value was for the situation when we do not have any value at all.
 
 */
 
 
-let salaried = {
-  John: 100,
-  Pete: 300,
-  Mary: 250,
-};
-
-function topSalary(salaried) {
-  let maxSalary = 0;
-  let topName = null;
-
-  for (let [name, salary] of Object.entries(salaries)) {
-    if (salary > maxSalary) {
-      maxSalary = salary;
-      topName = name;
-    }
-  }
-  return topName;
-}
-console.log(topSalary(salaried));
