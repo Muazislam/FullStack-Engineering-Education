@@ -1,233 +1,67 @@
-// // We have an array with a name and surname
-// let arr = ["John", "Smith"];
+/*
+We have an object:
 
-// // destructing assignment
-// // set's firstName = arr[0]
-// // and surname = arr[1]
-// let [firstName, surname] = arr;
+let user = {
+  name: "John",
+  years: 30
+};
 
-// alert(firstName);
-// alert(surname);
+Write the destructuring assignment that reads:
 
-// -------------------------------------
-// -------------------------------------
+    name property into the variable name.
+    years property into the variable age.
+    isAdmin property into the variable isAdmin (false, if no such property)
 
-// let [firstName, surname] = "John Smith".split(" ");
-// alert(firstName);
-// alert(surname);
+*/
 
-// -------------------------------------
-// -------------------------------------
+let user = {
+  name: "John",
+  years: 30,
+};
 
-// let user = {
-//   name: "John",
-//   age: 30,
-// };
+let { name, years: age, isAdmin = false } = user;
 
-// for (let [key, value] of Object.entries(user)) {
-//   // The Object.entries first converts the object
-//   // into array. meaning,,
-//   // [["name", "John"], ["age", 30]].
-//   // because for...of doesn't work on object.
-//   // it works on arrays. So, smartly, we first convert the object
-//   // into the array and then we make the output.
+console.log(name);
+console.log(age);
+console.log(isAdmin);
 
-//   alert(`${key}: ${value}`);
-// }
+//-------------------------------------------------------------------
 
-// -------------------------------------
-// -------------------------------------
+/*
+There is a salaries object:
 
-// let guest = "Jane";
-// let admin = "Pete";
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
 
-// [guest, admin] = [admin, guest];
+Create the function topSalary(salaries) that returns the name of the top-paid person.
 
-// alert(`${guest} ${admin}`);
+    If salaries is empty, it should return null.
+    If there are multiple top-paid persons, return any of them.
 
-// -------------------------------------
-// -------------------------------------
+P.S. Use Object.entries and destructuring to iterate over key/value pairs.
 
-// let [name1, name2] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
-// alert(name1);
-// alert(name2);
-// Further items aren't assigned anywhere
+*/
 
-// -------------------------------------
-// -------------------------------------
 
-// let [name1, name2, ...rest] = [
-//   "Julius",
-//   "Caesar",
-//   "Consul",
-//   "of the Roman Republic",
-// ];
+let salaried = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
 
-// alert(name1);
-// alert(name2);
-// alert(rest[0]);
-// alert(rest[1]);
-// alert(rest.length);
+function topSalary(salaried) {
+  let maxSalary = 0;
+  let topName = null;
 
-// let [name1, name2, ...titles] = ["Julius", "Caesar", "Counsul", "of the Roman Republic"];
-
-// -------------------------------------
-// -------------------------------------
-
-// let [firstName, surname] = [];
-
-// alert(firstName);
-// alert(surname);
-
-// let [name = "Guest", surname = "Anonymous"] = ["Julius"];
-
-// alert(name);
-// alert(surname);
-
-// -------------------------------------
-// -------------------------------------
-
-// let [name = prompt("name?"), surname = prompt("surname?")] = ["Julius"];
-
-// alert(name);
-// alert(surname);
-
-// -------------------------------------
-// -------------------------------------
-
-// let {var1, var2} = {var1:..., var2:...}
-
-// let options = {
-//   title: "Menu",
-//   width: 100,
-//   height: 200,
-// };
-
-// let { title, width, height } = options;
-
-// alert(title);
-// alert(width);
-// alert(height);
-
-// -------------------------------------
-// -------------------------------------
-
-// let {height, width, title} = { title: "Menu", height: 200, width: 100};
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   name: "Muaz",
-//   height: 5.9,
-//   age: 23,
-// };
-
-// let { name: n, height: h, age: a } = options;
-
-// console.log(n);
-// console.log(h);
-// console.log(a);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   name: "Muaz",
-
-//   age: 22,
-//   height: 5.9,
-// };
-
-// let { name, surname = "Islam Babar", age, height } = options;
-
-// console.log(name);
-// console.log(surname);
-// console.log(age);
-// console.log(height);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   title: "Menu",
-// };
-
-// let { width = prompt("width?"), title = prompt("title?") } = options;
-
-// console.log(title);
-// console.log(width);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   title: "Menu",
-//   width: 100,
-//   height: 200,
-// };
-
-// let { title } = options;
-
-// console.log(title);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   title: "Menu",
-//   height: 200,
-//   width: 100,
-// };
-
-// let { title, ...rest } = options;
-
-// console.log(rest.height);
-// console.log(rest.width);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   size: {
-//     width: 100,
-//     height: 200,
-//   },
-//   items: ["Cake", "Donut"],
-//   extra: true,
-// };
-
-// let {
-//   size: { width, height },
-//   items: [item1, item2],
-
-// } = options;
-
-// console.log(width);
-// console.log(height);
-// console.log(item1);
-// console.log(item2);
-
-// -------------------------------------
-// -------------------------------------
-
-// let options = {
-//   title: "My menu",
-//   items: ["Item1", "Item2"],
-// };
-
-// function showMenu({
-//   title = "Untitled",
-//   width = 200,
-//   height = 100,
-//   items = [],
-// }) {
-//   console.log(`${title} ${width} ${height}`);
-//   console.log(items);
-// }
-
-// showMenu(options);
-
-// -------------------------------------
-// -------------------------------------
-
+  for (let [name, salary] of Object.entries(salaries)) {
+    if (salary > maxSalary) {
+      maxSalary = salary;
+      topName = name;
+    }
+  }
+  return topName;
+}
+console.log(topSalary(salaried));
