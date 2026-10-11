@@ -1,44 +1,74 @@
-/*
-Create these objects:
+// let user = {};
 
-const book1 = {
-  title: "Clean Code",
-  author: "Robert C. Martin"
-};
+// console.log(user.address.street);
 
-const book2 = {
-  title: "Deep Work",
-  author: "Cal Newport",
-  rating: 0
-};
+// document.querySelector('.elem') is null if there's no element.
+// let html = document.querySelector("elem").innerHTML; // error if it's null
 
-Destructure rating with a default value of "Not rated".
+// let user = {};
 
-Predict what happens for:
+// console.log(user.address ? user.address.street : undefined);  // THis is not correct either.
 
-book1
-book2
-Pay special attention to whether the default replaces 0.
+// let user = {};
 
-//--------------------------------------------------------------------
+// console.log(user.address && user.address.street && user.address.street.name);
 
-const book1 = {
-  title: "Clean Code",
-  author: "Robert C. Martin",
-};
+// Anything before ?. that is undefined or null make the code stop.
 
-const book2 = {
-  title: "Deep Work",
-  author: "Cal Newport",
-  rating: 0,
-};
+// let user = {};
 
-let { title, author, rating = "Not rated" } = book2;
+// console.log(user?.address?.street);
 
-console.log(title);
-console.log(author);
-console.log(rating); // The default rating value did not replace zero. The zero from the object persists, despite the default value. I would think that the default value was for the situation when we do not have any value at all.
+// let html = document.querySelector("elem")?.innerHTML;
 
-*/
+// let user = null;
 
+// console.log(user?.address);
+// console.log(user?.address.street);
 
+// let user = null;
+// let x = 0;
+
+// user?.sayHi(x++);
+
+// console.log(x);
+
+// let userAdmin = {
+//   admin() {
+//     console.log("I am admin");
+//   },
+// };
+
+// let userGuest = {};
+
+// userAdmin.admin?.();
+// userGuest.admin?.();
+
+// let key = "firstName";
+
+// let user1 = {
+//   firstName: "John",
+// };
+
+// let user2 = null;
+
+// console.log(user1?.[key]);
+// console.log(user2?.[key]);
+//
+//
+//
+
+//let key = "firstName";
+
+//let user1 = {
+//  firstName: "John",
+//};
+
+//let user2 = null;
+
+//console.log(user1?.[key]);
+//console.log(user2?.[key]);
+
+let user = null;
+
+user?.name = "John";
