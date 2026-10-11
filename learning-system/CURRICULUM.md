@@ -142,6 +142,8 @@ Write `keepBooksIf(books, testFn)` and use it to find unread books.
 
 ### Day D - Destructuring, Defaults, Optional Chaining
 
+**Status:** `[x]` complete (learner-reported; main problem instructor-verified)
+
 Learn:
 
 - object destructuring,
@@ -160,6 +162,8 @@ Write a function that takes a book object and returns a display title. If
 must still display `0`, not a fallback value.
 
 ### Day E - Spread, Rest, and Immutable Updates
+
+**Status:** `[~]` current
 
 Learn:
 

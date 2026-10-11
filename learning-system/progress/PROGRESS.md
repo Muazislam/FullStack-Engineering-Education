@@ -7,12 +7,12 @@ Last updated: 2026-10-11
 | Metric | Value |
 |---|---:|
 | Current module | Module 0 - JavaScript Foundations |
-| Current focus | Day D: main `describeBook` problem complete; finish remaining practice and recall |
-| Module completion | 38% |
-| Total time spent | 300 minutes (5 hours) |
+| Current focus | Day E - Spread, rest, and immutable updates |
+| Module completion | 48% |
+| Total time spent | 540 minutes (9 hours) |
 | Active days | 3 |
 | Sessions completed | 4 |
-| Recall sessions completed | 1 |
+| Recall sessions completed | 2 |
 | Checkpoints passed | 2 |
 | Project features completed | 0 |
 
@@ -41,7 +41,7 @@ Last updated: 2026-10-11
 
 | Module | Status | Completion | Time Spent |
 |---|---:|---:|---:|
-| Module 0 - JavaScript Foundations | `[~]` | 38% | 300 min |
+| Module 0 - JavaScript Foundations | `[~]` | 48% | 540 min |
 | Module 1 - Describing the UI | `[ ]` | 0% | 0 min |
 | Module 2 - Adding Interactivity | `[ ]` | 0% | 0 min |
 | Module 3 - Managing State | `[ ]` | 0% | 0 min |
@@ -72,24 +72,24 @@ Update the chart values after each session.
 ```mermaid
 xychart-beta
   title "Cumulative Study Time"
-  x-axis ["Start", "2026-09-26", "2026-09-27"]
-  y-axis "Minutes" 0 --> 300
-  line [0, 30, 300]
+  x-axis ["Start", "2026-09-26", "2026-09-27", "2026-10-11"]
+  y-axis "Minutes" 0 --> 600
+  line [0, 30, 300, 540]
 ```
 
 ### Progress Pie Graph
 
 ```mermaid
 pie title Overall Curriculum Progress
-  "Completed" : 38
-  "Remaining" : 62
+  "Completed" : 48
+  "Remaining" : 52
 ```
 
 ### Time By Module Pie Graph
 
 ```mermaid
 pie title Time Spent By Module
-  "Module 0" : 300
+  "Module 0" : 540
   "Other Modules" : 0
 ```
 
@@ -122,14 +122,18 @@ Use intensity values:
     <td>4</td>
     <td style="background:#216e39;width:80px;">&nbsp;</td>
   </tr>
+  <tr>
+    <td>2026-10-11</td>
+    <td>240</td>
+    <td>4</td>
+    <td style="background:#216e39;width:80px;">&nbsp;</td>
+  </tr>
 </table>
 
 ## Current Stuck Points
 
-- In optional chaining examples, distinguish a missing intermediate object from a missing final property.
-- `??` preserves empty strings, zero, and false; `||` uses its fallback for all falsy values.
-- Finish explaining the skipped slot in array destructuring and test the default rating on a book with no rating.
+- Day D tasks and recall were marked complete at the learner's request; the unsubmitted explanations were not independently assessed and can be revisited in a later recall session.
 
 ## Next Session Target
 
-Continue Day D: finish the remaining task explanations and perform the recall checkpoint.
+Start Day E: practice spread, rest parameters, shallow copying, and immutable book updates.
