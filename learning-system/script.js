@@ -1,52 +1,58 @@
+// ## Day D Main Problem
 //
-// ## Task 5: `??` versus `||`
-//
-// Predict every result:
+// Write this function:
 //
 // ```js
-// console.log(0 ?? "fallback");
-// console.log(0 || "fallback");
-//
-// console.log("" ?? "fallback");
-// console.log("" || "fallback");
-//
-// console.log(null ?? "fallback");
-// console.log(undefined ?? "fallback");
+// function describeBook(book) {
+//   // your code
+// }
 // ```
 //
-// Explain:
+// It must return a sentence containing:
 //
-// - Which values cause `??` to use the fallback?
-// - Which values cause `||` to use the fallback?
-// - Why is `??` better for displaying a book rating of `0`?
+// - the title,
+// - the author or `"Unknown author"`,
+// - the subtitle or `"No subtitle"`,
+// - the rating or `"No rating"`.
+//
+// Use:
+//
+// - object destructuring,
+// - a renamed destructured property,
+// - a default value,
+// - optional chaining,
+// - `??`.
+//
+// Test it with:
 //
 
-console.log(0 ?? "fallback");
-console.log(0 || "fallback");
+const books = [
+  {
+    title: "Clean Code",
+    author: "Robert C. Martin",
+    rating: 4.5,
+    metadata: {
+      subtitle: "A Handbook of Agile Software Craftsmanship",
+    },
+  },
+  {
+    title: "Deep Work",
+    rating: 0,
+    metadata: {},
+  },
+  {
+    title: "The Pragmatic Programmer",
+    author: "Andrew Hunt",
+    rating: null,
+  },
+];
+function describeBook(book) {
+  const { title, author, rating, metadata: { subtitle } = {} } = book;
 
-console.log("" ?? "fallback");
-console.log("" || "fallback");
+  console.log(title);
+  console.log(author ?? "Unknown Author");
+  console.log(subtitle ?? "No subtitle");
+  console.log(rating ?? "No rating");
+}
 
-console.log(null ?? "fallback");
-console.log(undefined ?? "fallback");
-
-/*
-since the value "" causes the ?? to use fallback. Because ?? uses fallback only if
-the value on left side is undefined or null. Since, empty paranthesis is
-undefined value. So, it will move to "fallback".
-
-For, ||, if the value is falsy, it moves to "fallback.". Here,
-0, "" are falsy. Therefore, it will use fallback on all of them.
-
-?? is better for displaying the book rating of 0.
-Because ?? does not move to fallback unless the value is
-undefined or null. This is why it is helpfull. And because it 
-covers the problem of || which is that it moves
-away if the value is falsy. So, even theoufh the value 0 can 
-be useful output. It is still ignoreed. Therefore,
-we use ??
-  
-}) 
-);
-
-*/
+books.forEach(describeBook);
