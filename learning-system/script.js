@@ -1,74 +1,42 @@
-// let user = {};
+// result = a !== null && a !== undefined ? a : b;
 
-// console.log(user.address.street);
+// let user = "John";
 
-// document.querySelector('.elem') is null if there's no element.
-// let html = document.querySelector("elem").innerHTML; // error if it's null
+// console.log(user ?? "Anonymous");
 
-// let user = {};
+// let firstName = null;
+// let lastName = null;
+// let nickName = "Supercoder";
 
-// console.log(user.address ? user.address.street : undefined);  // THis is not correct either.
+// console.log(firstName ?? lastName ?? nickName ?? "Anonymous");
 
-// let user = {};
+// let firstName = null;
+// let lastName = null;
+// let nickName = "Supercoder";
 
-// console.log(user.address && user.address.street && user.address.street.name);
-
-// Anything before ?. that is undefined or null make the code stop.
-
-// let user = {};
-
-// console.log(user?.address?.street);
-
-// let html = document.querySelector("elem")?.innerHTML;
-
-// let user = null;
-
-// console.log(user?.address);
-// console.log(user?.address.street);
-
-// let user = null;
-// let x = 0;
-
-// user?.sayHi(x++);
-
-// console.log(x);
-
-// let userAdmin = {
-//   admin() {
-//     console.log("I am admin");
-//   },
-// };
-
-// let userGuest = {};
-
-// userAdmin.admin?.();
-// userGuest.admin?.();
-
-// let key = "firstName";
-
-// let user1 = {
-//   firstName: "John",
-// };
-
-// let user2 = null;
-
-// console.log(user1?.[key]);
-// console.log(user2?.[key]);
-//
-//
+// console.log(firstName || lastName || nickName || "Anonymous");
 //
 
-//let key = "firstName";
+// let height = 0;
 
-//let user1 = {
-//  firstName: "John",
-//};
+// console.log(height || 100); // 100
+// console.log(height ?? 100); // 0
 
-//let user2 = null;
+// || returns the first truthy value
+// ?? returns the first defined value.
+//
 
-//console.log(user1?.[key]);
-//console.log(user2?.[key]);
+// precendence of ?? operator is the same as ||. They both equal 3.
+// just like ||, the nullish coalescing operator ?? is evaluated before = and ?, but
+// after most other operations, such as +,*.
 
-let user = null;
+// let height = null;
+// let width = null;
 
-user?.name = "John";
+// let area = (height ?? 100) * (width ?? 50);
+// console.log(area);
+//
+
+// let area = height ?? 100 * width ?? 50;
+
+let area2 = height ?? 100 * width ?? 50;
