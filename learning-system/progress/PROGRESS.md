@@ -1,17 +1,17 @@
 # Progress Dashboard
 
-Last updated: 2026-09-27
+Last updated: 2026-10-11
 
 ## Current State
 
 | Metric | Value |
 |---|---:|
 | Current module | Module 0 - JavaScript Foundations |
-| Current focus | Day C repair: function scope, declarations, expressions, and arrow functions |
+| Current focus | Day D: main `describeBook` problem complete; finish remaining practice and recall |
 | Module completion | 38% |
 | Total time spent | 300 minutes (5 hours) |
-| Active days | 2 |
-| Sessions completed | 2 |
+| Active days | 3 |
+| Sessions completed | 4 |
 | Recall sessions completed | 1 |
 | Checkpoints passed | 2 |
 | Project features completed | 0 |
@@ -41,7 +41,7 @@ Last updated: 2026-09-27
 
 | Module | Status | Completion | Time Spent |
 |---|---:|---:|---:|
-| Module 0 - JavaScript Foundations | `[~]` | 38% | 240 min |
+| Module 0 - JavaScript Foundations | `[~]` | 38% | 300 min |
 | Module 1 - Describing the UI | `[ ]` | 0% | 0 min |
 | Module 2 - Adding Interactivity | `[ ]` | 0% | 0 min |
 | Module 3 - Managing State | `[ ]` | 0% | 0 min |
@@ -126,15 +126,10 @@ Use intensity values:
 
 ## Current Stuck Points
 
-- `push()` returns the new array length, not the pushed value.
-- Array-of-object syntax: use `books.push({ ... })` and access an object with `books[0]`.
-- Continue reinforcing `return` versus a method that only mutates an object.
-- A variable assigned without `let`, `const`, or `var` can leak into global scope; use `const` or `let`.
-- A nested function is scoped to its outer function; `square()` cannot be called outside `addsquares()`.
-- Passing an object or array lets a function mutate the shared value, but the parameter itself is local; this is not `this`.
-- Arrow functions can be object methods, but they do not get a dynamic `this` like method shorthand or a regular function.
-- Avoid duplicate function names in one scope because later declarations replace earlier ones.
+- In optional chaining examples, distinguish a missing intermediate object from a missing final property.
+- `??` preserves empty strings, zero, and false; `||` uses its fallback for all falsy values.
+- Finish explaining the skipped slot in array destructuring and test the default rating on a book with no rating.
 
 ## Next Session Target
 
-Begin Day D: destructuring, default values, optional chaining, and nullish coalescing.
+Continue Day D: finish the remaining task explanations and perform the recall checkpoint.

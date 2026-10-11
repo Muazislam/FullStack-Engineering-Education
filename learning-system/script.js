@@ -58,8 +58,6 @@ function describeBook(book) {
   return `Title: ${t}, Author: ${a}, Subtitle: ${s ?? "No subtitle"}, Rating: ${r ?? "No rating"}`;
 }
 
-books.forEach(describeBook);
-
 for (let info of books) {
-  console.log(info);
+  console.log(describeBook(info));
 }

@@ -22,7 +22,23 @@ Newest session first. Recall sessions get their own entries.
 
 ---
 
-No learning sessions logged yet.
+## 2026-10-11 - JavaScript Foundations: Day D Main Problem
+
+**Date:** 2026-10-11  
+**Duration:** Not recorded for this session  
+**Module / topic:** Module 0 - JavaScript Foundations; Day D destructuring, defaults, optional chaining, and nullish coalescing  
+**Type:** regular practice session  
+**Documentation used:** JavaScript.info Day D tasks were used; specific sections read during this session were not recorded  
+**Worked examples typed:** Object and array destructuring; destructured defaults; optional chaining; nullish coalescing; `describeBook` with book records  
+**Problems attempted:** Day D object destructuring, array destructuring, defaults, optional chaining, `??` versus `||`, and the main `describeBook` task  
+**Problems solved independently:** Main `describeBook` function, including renamed destructured properties, defaults, optional chaining for subtitle, and `??` handling for rating; corrected the output loop to print returned descriptions  
+**Problems solved with hints:** The main problem was refined through instructor feedback about returning one sentence and logging the returned values  
+**Student reasoning summary:** Correctly preserves rating `0`, applies fallbacks for missing author/subtitle and null rating, and returns a formatted sentence from `describeBook`. Earlier task responses still need a final explanation/correction for the optional chaining example, empty-string behavior with `??`, array skip-slot commas, and the missing-rating case.  
+**Instructor feedback:** Main Day D problem passed. Day D as a whole remains in progress until remaining task explanations and recall are completed.  
+**Project changes:** None  
+**Checkpoint or recall result:** Main problem pass; Day D checkpoint pending  
+**Metrics update:** 1 main problem completed; session duration not recorded; cumulative study time unchanged pending clarification of the previously supplied 22h20 figure.  
+**Revisit next time:** Complete the remaining Day D explanations and recall checkpoint.  
 
 ## 2026-09-26 - JavaScript Foundations: Arrays and Objects
 
