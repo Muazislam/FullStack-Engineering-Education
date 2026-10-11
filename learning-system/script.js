@@ -1,42 +1,31 @@
-// result = a !== null && a !== undefined ? a : b;
-
-// let user = "John";
-
-// console.log(user ?? "Anonymous");
-
-// let firstName = null;
-// let lastName = null;
-// let nickName = "Supercoder";
-
-// console.log(firstName ?? lastName ?? nickName ?? "Anonymous");
-
-// let firstName = null;
-// let lastName = null;
-// let nickName = "Supercoder";
-
-// console.log(firstName || lastName || nickName || "Anonymous");
 //
-
-// let height = 0;
-
-// console.log(height || 100); // 100
-// console.log(height ?? 100); // 0
-
-// || returns the first truthy value
-// ?? returns the first defined value.
+// ## Task 4: Optional Chaining
+// Predict the output before running:
 //
-
-// precendence of ?? operator is the same as ||. They both equal 3.
-// just like ||, the nullish coalescing operator ?? is evaluated before = and ?, but
-// after most other operations, such as +,*.
-
-// let height = null;
-// let width = null;
-
-// let area = (height ?? 100) * (width ?? 50);
-// console.log(area);
+// ```js
+// const book = {
+//   title: "The Pragmatic Programmer",
+//   metadata: {}
+// };
 //
+// console.log(book.metadata?.subtitle);
+// console.log(book.metadata?.subtitle ?? "No subtitle");
+// console.log(book.author?.name);
+// ```
+//
+// Then explain why this would cause an error:
+//
+// ```js
+// console.log(book.metadata.subtitle.text);
+// ```
+//
+// Rewrite it safely using optional chaining.
 
-// let area = height ?? 100 * width ?? 50;
+const book = {
+  title: "The Pragmatic Programmer",
+  metadata: {},
+};
 
-let area2 = height ?? 100 * width ?? 50;
+console.log(book.metadata?.subtitle);
+console.log(book.metadata?.subtitle ?? "No subtitle");
+console.log(book.author?.name);
