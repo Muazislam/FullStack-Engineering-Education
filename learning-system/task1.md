@@ -1,211 +1,111 @@
-Yes. We’ll use `javascript.info` for Day D because its explanations fit your learning style better.
+Day D is marked complete in your learning files, and the tracker is now on Day E. I recorded that you reported the remaining Day D work complete; the `describeBook` problem was verified here, while the other explanations and recall were not submitted for review.
 
-## Day D Topic
+## Day E: Spread, Rest, and Immutable Updates
 
-Destructuring, default values, optional chaining, and nullish coalescing.
+Read [javascript.info: Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread), focusing on **Rest parameters `...`**, **Spread syntax**, and **Copy an array/object**. Rest gathers remaining function arguments into an array; spread expands iterable values or copies array/object contents. [javascript.info](https://javascript.info/rest-parameters-spread)
 
-### Read these sections
-
-1. [Destructuring assignment](https://javascript.info/destructuring-assignment)
-
-Read:
-
-- Array destructuring
-- Ignore elements using commas
-- Object destructuring
-- The rest pattern
-- Default values
-- Smart function parameters
-
-2. [Optional chaining `?.`](https://javascript.info/optional-chaining)
-
-Read:
-
-- The “non-existing property” problem
-- Optional chaining
-- Short-circuiting
-- Other variants: `?.()` and `?.[]`
-- Don’t overuse optional chaining
-
-3. [Nullish coalescing operator `??`](https://javascript.info/nullish-coalescing-operator)
-
-Read the complete page, especially:
-
-- Using `??`
-- The difference between `??` and `||`
-- Combining `??` with other operators
-
-## Task 1: Official Destructuring Task
-
-Solve the JavaScript.info exercise:
-
-[Destructuring assignment task](https://javascript.info/task/destruct-user)
-
-Given:
+Type these examples yourself, predict the results first, then run them:
 
 ```js
-let user = {
-  name: "John",
-  years: 30
-};
+const book = { title: "Clean Code", rating: 0 };
+const ratedBook = { ...book, rating: 4 };
+
+console.log(book.rating);
+console.log(ratedBook.rating);
+console.log(book === ratedBook);
 ```
 
-Create variables named:
-
-- `name`
-- `age`, taken from `years`
-- `isAdmin`, with a default value of `false`
-
-Do not open the solution until you have attempted it.
-
-## Task 2: Practice Array Destructuring
-
-Create this array:
-
 ```js
-const shelf = ["Clean Code", "Deep Work", "The Pragmatic Programmer"];
+const shelf = ["Clean Code", "Deep Work"];
+const largerShelf = [...shelf, "The Pragmatic Programmer"];
+
+console.log(shelf);
+console.log(largerShelf);
 ```
 
-Destructure it into:
+Then try rest parameters:
 
 ```js
-const firstBook = ...;
-const secondBook = ...;
-const thirdBook = ...;
-```
-
-Then create another destructuring statement that skips the second book.
-
-Explain what the commas are doing.
-
-## Task 3: Practice Default Values
-
-Create these objects:
-
-```js
-const book1 = {
-  title: "Clean Code",
-  author: "Robert C. Martin"
-};
-
-const book2 = {
-  title: "Deep Work",
-  author: "Cal Newport",
-  rating: 0
-};
-```
-
-Destructure `rating` with a default value of `"Not rated"`.
-
-Predict what happens for:
-
-- `book1`
-- `book2`
-
-Pay special attention to whether the default replaces `0`.
-
-## Task 4: Optional Chaining
-
-Predict the output before running:
-
-```js
-const book = {
-  title: "The Pragmatic Programmer",
-  metadata: {}
-};
-
-console.log(book.metadata?.subtitle);
-console.log(book.metadata?.subtitle ?? "No subtitle");
-console.log(book.author?.name);
-```
-
-Then explain why this would cause an error:
-
-```js
-console.log(book.metadata.subtitle.text);
-```
-
-Rewrite it safely using optional chaining.
-
-## Task 5: `??` versus `||`
-
-Predict every result:
-
-```js
-console.log(0 ?? "fallback");
-console.log(0 || "fallback");
-
-console.log("" ?? "fallback");
-console.log("" || "fallback");
-
-console.log(null ?? "fallback");
-console.log(undefined ?? "fallback");
-```
-
-Explain:
-
-- Which values cause `??` to use the fallback?
-- Which values cause `||` to use the fallback?
-- Why is `??` better for displaying a book rating of `0`?
-
-## Day D Main Problem
-
-Write this function:
-
-```js
-function describeBook(book) {
-  // your code
+function makeBook(title, ...tags) {
+  return { title, tags };
 }
+
+console.log(makeBook("Clean Code", "software", "craft"));
 ```
 
-It must return a sentence containing:
+### Main Problem: Update a Book Without Mutating the Shelf
 
-- the title,
-- the author or `"Unknown author"`,
-- the subtitle or `"No subtitle"`,
-- the rating or `"No rating"`.
-
-Use:
-
-- object destructuring,
-- a renamed destructured property,
-- a default value,
-- optional chaining,
-- `??`.
-
-Test it with:
+Write `markBookRead(books, targetId)`. It should return a **new array** where the matching book has `read: true`. Keep every other book field. Do not change the original array or any original book.
 
 ```js
 const books = [
-  {
-    title: "Clean Code",
-    author: "Robert C. Martin",
-    rating: 4.5,
-    metadata: {
-      subtitle: "A Handbook of Agile Software Craftsmanship"
-    }
-  },
-  {
-    title: "Deep Work",
-    rating: 0,
-    metadata: {}
-  },
-  {
-    title: "The Pragmatic Programmer",
-    author: "Andrew Hunt",
-    rating: null
-  }
+  { id: 1, title: "Clean Code", read: false, rating: 4.5 },
+  { id: 2, title: "Deep Work", read: false, rating: 0 },
+  { id: 3, title: "The Pragmatic Programmer", read: true, rating: 5 },
 ];
+
+// Write markBookRead(books, targetId) here.
 ```
 
-Before running the code, write your expected output for all three books.
+Test it with an existing ID and an ID that isn’t present. Before coding, write your pseudocode and predict:
 
-Send me:
+- Which book changes in the returned array?
+- What should remain unchanged in `books`?
+- Are the returned array and original array the same array?
 
-1. Your answers to Tasks 1–5.
-2. Your `describeBook` function.
-3. Your predicted outputs.
-4. Your actual outputs.
-5. Your explanation of `??` versus `||`.
+Send your function, predictions, actual output, and explanation of where you used spread. I’ve recorded Day D and moved the learning tracker to Day E in the [curriculum](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/CURRICULUM.md), [progress dashboard](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/progress/PROGRESS.md), and [session log](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/progress/SESSIONS.md).Day D is marked complete in your learning files, and the tracker is now on Day E. I recorded that you reported the remaining Day D work complete; the `describeBook` problem was verified here, while the other explanations and recall were not submitted for review.
 
-The official JavaScript.info material supports the concepts of destructuring, defaults, optional chaining, and preserving meaningful values such as `0` with `??`. ([Destructuring](https://javascript.info/destructuring-assignment), [optional chaining](https://javascript.info/optional-chaining), [nullish coalescing](https://javascript.info/nullish-coalescing-operator))
+## Day E: Spread, Rest, and Immutable Updates
+
+Read [javascript.info: Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread), focusing on **Rest parameters `...`**, **Spread syntax**, and **Copy an array/object**. Rest gathers remaining function arguments into an array; spread expands iterable values or copies array/object contents. [javascript.info](https://javascript.info/rest-parameters-spread)
+
+Type these examples yourself, predict the results first, then run them:
+
+```js
+const book = { title: "Clean Code", rating: 0 };
+const ratedBook = { ...book, rating: 4 };
+
+console.log(book.rating);
+console.log(ratedBook.rating);
+console.log(book === ratedBook);
+```
+
+```js
+const shelf = ["Clean Code", "Deep Work"];
+const largerShelf = [...shelf, "The Pragmatic Programmer"];
+
+console.log(shelf);
+console.log(largerShelf);
+```
+
+Then try rest parameters:
+
+```js
+function makeBook(title, ...tags) {
+  return { title, tags };
+}
+
+console.log(makeBook("Clean Code", "software", "craft"));
+```
+
+### Main Problem: Update a Book Without Mutating the Shelf
+
+Write `markBookRead(books, targetId)`. It should return a **new array** where the matching book has `read: true`. Keep every other book field. Do not change the original array or any original book.
+
+```js
+const books = [
+  { id: 1, title: "Clean Code", read: false, rating: 4.5 },
+  { id: 2, title: "Deep Work", read: false, rating: 0 },
+  { id: 3, title: "The Pragmatic Programmer", read: true, rating: 5 },
+];
+
+// Write markBookRead(books, targetId) here.
+```
+
+Test it with an existing ID and an ID that isn’t present. Before coding, write your pseudocode and predict:
+
+- Which book changes in the returned array?
+- What should remain unchanged in `books`?
+- Are the returned array and original array the same array?
+
+Send your function, predictions, actual output, and explanation of where you used spread. I’ve recorded Day D and moved the learning tracker to Day E in the [curriculum](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/CURRICULUM.md), [progress dashboard](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/progress/PROGRESS.md), and [session log](/home/muazislambabar/Documents/Claude-Projects/notes/S---React/learning-system/progress/SESSIONS.md).
