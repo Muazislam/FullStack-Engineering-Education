@@ -4,17 +4,17 @@ Read a small section, type the example, change one thing, run it, and write down
 
 ## 1. Node.js and npm
 
-- [ ] Read [Node.js Learn](https://nodejs.org/learn)
-- [ ] Read [Introduction to Node.js](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
-- [ ] Practise [JavaScript in Node.js](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
-- [ ] Practise the [Node.js Command Line](https://nodejs.org/learn/command-line)
-- [ ] Practise [Node.js environment variables](https://nodejs.org/learn/command-line/how-to-read-environment-variables-from-nodejs)
-- [ ] Read [Node.js asynchronous work](https://nodejs.org/learn/asynchronous-work)
-- [ ] Read about [Node.js HTTP](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
-- [ ] Read about [Node.js packages](https://nodejs.org/learn/getting-started/an-introduction-to-the-npm-package-manager)
-- [ ] Practise [`npm init`](https://docs.npmjs.com/cli/v11/commands/npm-init)
-- [ ] Practise [`npm install`](https://docs.npmjs.com/cli/v11/commands/npm-install)
-- [ ] Read about [package.json scripts](https://docs.npmjs.com/cli/v11/using-npm/scripts)
+- [x] Read [Node.js Learn](https://nodejs.org/learn)
+- [x] Read [Introduction to Node.js](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
+- [x] Practise [JavaScript in Node.js](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
+- [x] Practise the [Node.js Command Line](https://nodejs.org/learn/command-line)
+- [x] Practise [Node.js environment variables](https://nodejs.org/learn/command-line/how-to-read-environment-variables-from-nodejs)
+- [x] Read [Node.js asynchronous work](https://nodejs.org/learn/asynchronous-work)
+- [x] Read about [Node.js HTTP](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
+- [x] Read about [Node.js packages](https://nodejs.org/learn/getting-started/an-introduction-to-the-npm-package-manager)
+- [x] Practise [`npm init`](https://docs.npmjs.com/cli/v11/commands/npm-init)
+- [x] Practise [`npm install`](https://docs.npmjs.com/cli/v11/commands/npm-install)
+- [x] Read about [package.json scripts](https://docs.npmjs.com/cli/v11/using-npm/scripts)
 
 ## 2. Express server and routes
 
