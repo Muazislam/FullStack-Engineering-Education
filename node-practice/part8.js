@@ -36,23 +36,44 @@
 // const song = getSong();
 // console.log(`song is "${song}`);
 
-function final(someInput, callback) {
-  callback(`${someInput} and terminated by executing callback `);
+// function final(someInput, callback) {
+//   callback(`${someInput} and terminated by executing callback `);
+// }
+//
+// function middleware(someInput, callback) {
+//   return final(`${someInput} touched by middleware `, callback);
+// }
+//
+// function initiate() {
+//   const someInput = 'hello this is a function ';
+//   middleware(someInput, function (result) {
+//     console.log(result);
+//   });
+// }
+//
+// initiate();
+//
+// const operations = {
+//   { name: 'first', ms: 300},
+// }
+
+const operations = [
+  { name: "first", ms: 300 },
+  { name: "second", ms: 200 },
+  { name: "third", ms: 100 },
+];
+
+function run(op, callback) {
+  setTimeout(() => {
+    console.log("done:", op.name);
+    callback();
+  }, op.ms);
 }
 
-function middleware(someInput, callback) {
-  return final(`${someInput} touched by middleware `, callback);
+function serial(ops) {
+  const op = ops.shift();
+  if (!op) return console.log("finished");
+  run(op, () => serial(ops));
 }
 
-function initiate() {
-  const someInput = 'hello this is a function ';
-  middleware(someInput, function (result) {
-    console.log(result);
-  });
-}
-
-initiate();
-
-const operations = {
-  { name: 'first', ms: 300},
-}
+serial([...operations.forEach((op) => run(op, () => {}))]);
