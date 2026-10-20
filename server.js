@@ -11,9 +11,10 @@
 // })
 // app.listen(3000);
 
-import app from "./src/app.js"
+// import app from "./src/app.js"
+import exercise1 from "./src/exercise1.js";
 
-app.listen(3000, () => {
+exercise1.listen(3000, () => {
   console.log("Server is running at port 3000.")
 });
 
