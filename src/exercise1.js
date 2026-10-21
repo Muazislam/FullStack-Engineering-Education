@@ -137,11 +137,18 @@ app.get("/notes", (req, res) => {
 // 3. **DELETE `/notes/:index`:** Test it. Create 3 notes, delete the middle one, then `GET /notes` and look closely at what comes back. You'll see a problem with how `delete` works on arrays. Find a better array method that removes the item properly.
 
 app.delete("/notes/:index", (req, res) => {
-  const index = req.params.index 
-  delete notes [ index ]
-  res.status(200).json({
-    message: "note deleted successfully"
-  })
+  const index = Number(req.params.index)
+  
+  if(index >= 0 && index < notes.length && Number.isInteger(index)){
+    notes.splice(index,1)
+    res.status(200).json({
+      message: "note deleted successfully"
+    })
+  } else {
+    res.status(404).json({
+      message: "Please enter an existing note."
+    })
+  }
 })
 
 // Patch API notes/index 
