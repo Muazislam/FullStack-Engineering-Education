@@ -1,52 +1,88 @@
-// // creates the server
-// import express from "express";
+import express from "express"
+import noteModel from "./models/note.model.js"
+
+const app = express()
+app.use(express.json())
+
+
+// ---------------------------------------------------
 //
-// const app = express();
+// POST 
 //
+// ---------------------------------------------------
+
+app.post("/notes", async (req,res) => {
+  
+  const data = req.body;
+  await noteModel.create({
+      title: data.title,
+      description: data.description,
+  })
+
+  res.status(201).json({
+    message: "Note Created"
+  })
+})
+
+
+// ---------------------------------------------------
 //
-// app.use(express.json())
+// GET 
 //
-// const notes = []
+// ---------------------------------------------------
+
+app.get("/notes", async (req, res) => {
+
+  const notes = await noteModel.find();
+
+  /*
+   * This method is used to fetch only one object in array.
+   *
+   * const notes = await noteModel.fineOne({
+   *    title: "My dress up darling",
+   * })
+    */
+  
+  res.status(200).json({
+    message: "Note's fetched successfully",
+    notes: notes,
+  })
+})
+
+// ---------------------------------------------------
 //
-// // creating API  /POST/notes 
-// app.post("/notes", (req,res) => {
-//   notes.push(req.body);
-//   res.status(201).json({
-//     message: "note created successfully"
-//   })
-// })
+// DELETE
 //
-// // notes/Get API
+// ---------------------------------------------------
+
+app.delete("/notes/:id", async (req, res) => {
+  const id = req.params.id;
+
+  await noteModel.findOneAndDelete({
+        _id:id
+  })
+
+  res.status(200).json({
+    message: "Note deleted successfully"
+  })
+})
+
+// ---------------------------------------------------
 //
-// app.get("/notes", (req, res) => {
-//   res.status(200).json({
-//       message: "notes fetched successfully",
-//       notes: notes
-//   })
-// })
+// PATCH
 //
-// // delete API notes/index 
-// app.delete("/notes/:index", (req, res) => {
-//   const index = req.params.index 
-//   delete notes [ index ]
-//   res.status(200).json({
-//     message: "note deleted successfully"
-//   })
-// })
-//
-// // Patch API notes/index 
-//
-// app.patch("/notes/:index", (req, res) => {
-//   const index = req.params.index
-//   const title = req.body.title
-//   const description = req.body.description
-//
-//   notes [ index ].description = description
-//   notes [ index ].title = title
-//
-//   res.status(200).json({
-//     message: "note updated successfully"
-//   })
-// })
-//
-// export default app;
+// ---------------------------------------------------
+
+app.patch("/notes/:id", async (req, res) => {
+
+  const id = req.params.id
+  const description = req.body.description
+
+  await noteModel.findOneAndUpdate({_id:id}, {description:description})
+
+  res.status(200).json({
+    message: "Data updated successfully"
+  })
+})
+
+export default app;
