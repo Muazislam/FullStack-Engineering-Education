@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,10 @@
   },
   "homepage": "https://github.com/Muazislam/FullStack-Engineering-Education#readme",
   "dependencies": {
+    "@imagekit/nodejs": "^7.13.0",
+    "dotenv": "^18.0.9",
     "express": "^5.3.0",
-    "mongoose": "^9.11.3"
+    "mongoose": "^9.11.4",
+    "multer": "^2.5.0"
   }
 }

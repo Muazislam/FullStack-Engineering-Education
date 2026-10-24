@@ -1,9 +1,12 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
+import dotenv from "dotenv"
 
-async function connectDB() {
-    await mongoose.connect("mongodb+srv://muazislambabar_db_user:axTb6KXLYk8AR5Ez@cluster0.l6iqnpu.mongodb.net/halley")
-    
-    console.log("DB is connected")
+dotenv.config()
+
+async function connectDB(){
+    await mongoose.connect(process.env.MONGO_URI)
+
+    console.log("Connected to DB")
 }
 
 export default connectDB;
